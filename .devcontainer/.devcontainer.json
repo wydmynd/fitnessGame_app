@@ -1,11 +1,14 @@
 {
-  "name": "Flutter",
-  "image": "ghcr.io/cirruslabs/flutter:3.24.0",
+  "name": "Flutter Development",
+  "image": "cirrusci/flutter:stable",
   "customizations": {
     "vscode": {
-      "extensions": ["Dart-Code.flutter", "Dart-Code.dart-code"]
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code"
+      ]
     }
   },
-  "postCreateCommand": "flutter doctor",
-  "forwardPorts": [8080, 3000]
+  "postCreateCommand": "flutter doctor -v",
+  "forwardPorts": [3000, 8080]
 }
