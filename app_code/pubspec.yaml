@@ -10,7 +10,7 @@ dependencies:
     sdk: flutter
   audioplayers: ^5.2.1
   provider: 6.0.4 # Compatible with Dart >=3.0.0
-  flutter_blue_plus: 2.0.0 # bumped from 1.2.0
+  flutter_blue_plus: 1.2.0 # bumped from 1.2.0
   geolocator: ^10.0.3 # Compatible with Flutter 3.13.0
   flex_color_scheme: 6.1.2 # Compatible with Dart >=3.0.0
   simple_gradient_text: 1.2.4
