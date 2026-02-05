@@ -4,7 +4,7 @@ import 'dart:async';
 import 'functions.dart';
 import 'package:flutter/material.dart';
 import 'BLE.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 
 //----------------------------------------------------------------------------------------------------------//
 //------------------------------------------Connection Page-------------------------------------------------//
@@ -193,9 +193,13 @@ class LoadingPage extends StatelessWidget
                 child: Column(
                   children: const [
                     Spacer(flex: 10,),
-                    SpinKitThreeBounce(
-                      color: Colors.white,
-                      size: 30,
+                    SizedBox(
+                      width: 30,
+                      height: 30,
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 3,
+                      ),
                     ),
                     Spacer(flex: 9),
                   ],

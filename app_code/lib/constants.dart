@@ -1,6 +1,5 @@
 
 
-import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -214,10 +213,7 @@ const String connectExp = '''1.Activate your Bluetooth and GPS on your phone.
 4.Hold your phone close to the blue button''';
 
 
-//-----------------------FlexThemeData Styling----------------------------//
-
-const FlexScheme flexScheme = FlexScheme.materialHc;
-const int usedColors = 6;
+//-----------------------Theme Styling----------------------------//
 
 
 const TextTheme textStyle = TextTheme(
@@ -242,53 +238,9 @@ const TextTheme textStyle = TextTheme(
 );
 
 
-var darkTheme =   FlexThemeData.dark(
-  scheme: flexScheme,
-  usedColors: 6,
-  surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
-  blendLevel: 10,
-  appBarStyle: FlexAppBarStyle.background,
-  bottomAppBarElevation: 2.0,
+var darkTheme = ThemeData.dark(useMaterial3: true).copyWith(
   textTheme: textStyle,
-  darkIsTrueBlack: false,
-  subThemesData: const FlexSubThemesData(
-    blendTextTheme: true,
-    useTextTheme: true,
-    // useM2StyleDividerInM3: true,
-    thickBorderWidth: 2.0,
-    elevatedButtonRadius: 40.0,
-    elevatedButtonSchemeColor: SchemeColor.onPrimary,
-    elevatedButtonSecondarySchemeColor: SchemeColor.primaryContainer,
-    outlinedButtonRadius: 2.0,
-    inputDecoratorSchemeColor: SchemeColor.primary,
-    // inputDecoratorBackgroundAlpha: 48,
-    inputDecoratorRadius: 19.0,
-    inputDecoratorBorderWidth: 3.5,
-    // inputDecoratorPrefixIconSchemeColor: SchemeColor.primary,
-    tooltipRadius: 19,
-    tooltipSchemeColor: SchemeColor.secondaryContainer,
-    // drawerElevation: 1.0,
-    // drawerWidth: 290.0,
-    bottomNavigationBarSelectedLabelSchemeColor: SchemeColor.secondary,
-    bottomNavigationBarMutedUnselectedLabel: false,
-    bottomNavigationBarSelectedIconSchemeColor: SchemeColor.secondary,
-    bottomNavigationBarMutedUnselectedIcon: false,
-    navigationBarSelectedLabelSchemeColor: SchemeColor.onSecondaryContainer,
-    navigationBarSelectedIconSchemeColor: SchemeColor.onSecondaryContainer,
-    navigationBarIndicatorSchemeColor: SchemeColor.secondaryContainer,
-    navigationBarIndicatorOpacity: 1.00,
-    navigationBarElevation: 1.0,
-    navigationBarHeight: 72.0,
-    navigationRailSelectedLabelSchemeColor: SchemeColor.onSecondaryContainer,
-    navigationRailSelectedIconSchemeColor: SchemeColor.onSecondaryContainer,
-    navigationRailIndicatorSchemeColor: SchemeColor.secondaryContainer,
-    navigationRailIndicatorOpacity: 1.00,
-  ),
-  keyColors: const FlexKeyColors(
-    useSecondary: true,
-  ),
-  visualDensity: FlexColorScheme.comfortablePlatformDensity,
-  useMaterial3: true,
+  visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
 //-------------------------DropDown values-------------------------------//
