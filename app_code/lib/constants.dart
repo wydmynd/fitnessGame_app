@@ -241,6 +241,14 @@ const TextTheme textStyle = TextTheme(
 var darkTheme = ThemeData.dark(useMaterial3: true).copyWith(
   textTheme: textStyle,
   visualDensity: VisualDensity.adaptivePlatformDensity,
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+      textStyle: textStyle.displaySmall,
+      backgroundColor: Colors.blue,
+    ),
+  ),
 );
 
 //-------------------------DropDown values-------------------------------//
